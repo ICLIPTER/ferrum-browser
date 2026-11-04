@@ -8,6 +8,7 @@ license = "MIT"
 [dependencies]
 # Only the lighter glow (OpenGL) backend: faster builds, no wgpu stack.
 eframe = { version = "0.37.0", default-features = false, features = ["default_fonts", "glow"] }
+minreq = { version = "3", default-features = false, features = ["https-native-tls"] }
 url = "2.5.8"
 
 [profile.release]
