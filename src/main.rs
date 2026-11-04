@@ -11,6 +11,11 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 mod app;
+// Phase 2 networking is built and tested on its own first. The UI does not
+// call it yet; `app.rs` will in the next step, which is why dead-code warnings
+// are silenced for now.
+#[allow(dead_code)]
+mod network;
 mod url_input;
 
 use app::BrowserApp;
